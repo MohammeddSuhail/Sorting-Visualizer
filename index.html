@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+    <!-- for using fonnts from  fonts.google.com-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- for icons from fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/7a7e13cf9f.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- for incling css -->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" ><span class="whiteC">SORTING VISUALIZER</span></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="Algos Html/insertionSort.html"><span class="whiteC">Insertion Sort </span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Algos Html/selectionSort.html"><span class="whiteC">Selection Sort</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Algos Html/bubbleSort.html"><span class="whiteC">Bubble Sort</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Algos Html/mergeSort.html"><span class="whiteC">Merge Sort</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Algos Html/quickSort.html"><span class="whiteC">Quick Sort</span></a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    
+
+    <h1>Learn Sorting Algorithms By Visualizing It</h1>
+
+    <p><span>The following information illustrates about different sorting algorithms and their use cases.</span></p><br/>
+
+
+    <div style="text-align:left;margin-left:22%;margin-right: 15%;">
+        <p>Sorting algorithms are used to sort a data structure according to a specific order relationship, such as numerical order.</p>
+    <p>This operation is one of the most important and widespread in computer science. For a long time, new methods have been developed to make this procedure faster and faster.</p>
+    <p>There are currently hundreds of different sorting algorithms, each with its own specific characteristics. They are classified according to two metrics: space complexity and time complexity</p>
+    <p>Those two kinds of complexity are represented with asymptotic notations, mainly with the symbols O, Θ, Ω, representing respectively the upper bound, the tight bound, and the lower bound of the algorithm's complexity, specifying in brackets an expression in terms of n, the number of the elements of the data structure.</p>
+    <p><span>Most of them fall into two categories:</span></p>
+    <ul>
+        <li><span>Logarithmic</span><br/>
+            The complexity is proportional to the binary logarithm (i.e to the base 2) of n.<br/>
+            An example of a logarithmic sorting algorithm is Quick sort, with space and time complexity O(n × log n).
+        </li>
+        <li>
+            <span>Quadratic</span><br/>
+            The complexity is proportional to the square of n.<br/>
+            An example of a quadratic sorting algorithm is Bubble sort, with a time complexity of O(n<sup>2</sup>).
+        </li>
+    </ul>
+    <p>Sorting algorithms can be difficult to understand and it's easy to get confused. We believe visualizing sorting algorithms can be a great way to better understand their functioning while having fun!</p>
+
+</div>
+    
+
+    <div style="text-align:left;margin-left:22%">
+        
+
+        <hr style="color: steelblue; margin:3% 22% 1% 0"> 
+        <div class="key">
+          <h5 style="font-weight: bold; color: steelblue">KEY Intructions for Visualizing Sorting Algorithms.</h5>
+          <ul>
+            <li>Size of the array and speed of the algorithm can be set by sliding input bars.</li>
+            <li><span>Generate new array!</span> button generates new array</li>
+            <li><span>Sort</span> button sorts the array.</li>
+              <li>Dark blue colored bars are sorted.</li>
+              <li>Light blue colored bars are unsorted.</li>
+              <li>Different color bars marks the algorithm position.</li>
+              
+          </ul>
+      </div>
+      <hr style="color: steelblue; margin:3% 22% 1% 0"> 
+
+        <div class="algo">
+            <h3>ALGORITHM:</h3>
+            <span>Click on the below algorithms to know more about it.</span><br><br>
+            <ul>
+                <li><a class="algo_link" href="Algos Html/insertionSort.html">Insertion Sort</a></li>
+                <li><a class="algo_link" href="Algos Html/selectionSort.html">Selection Sort</a></li>
+                <li><a class="algo_link" href="Algos Html/bubbleSort.html">Bubble Sort</a></li>
+                <li><a class="algo_link" href="Algos Html/mergeSort.html">Merge Sort</a></li>
+                <li><a class="algo_link" href="Algos Html/quickSort.html">Quick Sort</a></li>
+            </ul>
+        </div>    
+
+        <hr style="color: steelblue; margin:3% 22% 1% 0">
+
+        <h3>DISCUSSION:</h3>
+
+        <span>These pages show 5 different sorting algorithms on 4 different initial conditions. These visualizations are intended to:</span><br><br>
+        <ul>
+            <li>Show how each algorithm operates.</li>
+            <li>Show that there is no best sorting algorithm.</li>
+            <li>Show the advantages and disadvantages of each algorithm.</li>
+            <li>Show that worse-case asymptotic behavior is not always the deciding factor in choosing an algorithm.</li>
+            <li>Show that the initial condition (input order and key distribution) affects performance as much as the algorithm choice.</li>
+        </ul>
+        <br>
+        
+        <span>The ideal sorting algorithm would have the following properties:</span>
+        <br><br>
+
+        <ul>
+            <li>Stable: Equal keys aren’t reordered.</li>
+            <li>Operates in place, requiring O(1) extra space.</li>
+            <li>Worst-case O(n·lg(n)) key comparisons.</li>
+            <li>Worst-case O(n) swaps.</li>
+            <li>Adaptive: Speeds up to O(n) when data is nearly sorted or when there are few unique keys.</li>
+        </ul>
+        
+        <span>There is no algorithm that has all of these properties, and so the choice of sorting algorithm depends on the application.</span>
+
+    </div>
+
+</body>
+
+<footer class="foot">
+    <b>Sorting Visualizer</b><br>
+    <br>
+    Project By<br>
+    <b>Mohammad Suhail</b><br>
+    <b>Prajith</b><br><br>
+    <span>© Copyright 2021</span>       
+
+</footer>
+
+
+</html>

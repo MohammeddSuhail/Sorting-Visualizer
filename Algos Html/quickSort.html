@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Quick Sort</title>
+        <link rel="stylesheet" href="../css/style1.css">
+        <meta charset="UTF-8">
+        <script src="../Algos Js/scriptForCode.js">
+        </script>
+        
+
+        <!-- for icons from fontawesome -->
+        <script
+            src="https://kit.fontawesome.com/7a7e13cf9f.js"
+            crossorigin="anonymous">
+        </script>
+
+        <!-- for using fonnts from  fonts.google.com-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@300&display=swap"
+            rel="stylesheet"
+        />
+        
+    </head>
+    <body>
+        <div class="titleAndNav">
+            <h1>SORTING VISUALIZER</h1>
+            <img src="../images/menu.png" onclick="openmenu()">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="insertionSort.html">Insertion Sort</a></li>
+                <li><a href="selectionSort.html">Selection Sort</a></li>
+                <li><a href="bubbleSort.html">Bubble Sort</a></li>
+                <li><a href="mergeSort.html">Merge Sort</a></li>
+            </ul>
+
+            <ul id="menu2" class="menu3">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="selectionSort.html">Selection Sort</a></li>
+                <li><a href="bubbleSort.html">Bubble Sort</a></li>
+                <li><a href="mergeSort.html">Merge Sort</a></li>
+                <li><a href="quickSort.html">Quick Sort</a></li>
+                <li  onclick="closemenu()" ><a>Close</a></li>
+            </ul>
+            <div class="clr"></div> 
+        </div>
+        <section class="heading">
+        <h1>Quick Sort</h1><hr>
+        </section>
+        <!---------Content-------->
+        <section class="content">
+            <div class="left">
+
+            <h2>DESCRIPTION</h2>
+            <p>Quicksort is the widely used sorting algorithm that makes n log n comparisons in average case for sorting an array of n elements. It is a faster and highly efficient sorting algorithm. This algorithm follows the divide and conquer approach.</p>
+
+              <p>Quick Sort is a sorting algorithm based on splitting the data structure in smaller partitions and sort them recursively until the data structure is sorted.</p>
+            <p>This division in partitions is done based on an element, called pivot: all the elements bigger than the pivot get placed on the right side of the structure, the smaller ones to the left, creating two partitions. Next, this procedure gets applied recursively to the two partitions and so on.</p>
+            </div>
+            <div class="right">
+            <h3>COMPLEXITY</h3>
+            <table>
+                <tr>
+                    <th>Average Complexity</th>
+                    <td>O(n x log n)</td>
+                </tr>
+                <tr>
+                    <th>Best Case</th>
+                    <td>O(n x log n)</td>
+                </tr>
+                <tr>
+                    <th>Worst Case</th>
+                    <td>O(n<sup>2</sup>)</td>
+                </tr>
+                <tr>
+                    <th>Space Complexity</th>
+                    <td>O(n)</td>
+                </tr>
+            </table>
+        </div>
+        
+        </section>
+        <!-----------------Visualization------------->
+
+        <div class="visual12">
+           
+
+            <button id="a_generate">Generate New Array!</button>
+            <button  id="bsort">Sort</button>
+        <nav>
+            <div class="array-inputs">
+                <p id="p1">Size of the array:</p>
+                <input id="a_size" type="range" min=20 max=150 step=1 value=80>
+                <p id="p2">Speed of the algorithm:</p>
+                <input id="a_speed" type="range" min=1 max=5 step=1 value=4>
+                
+            </div>
+        </nav>
+            
+    <section>
+
+        <div id="array_container">
+            
+        </div>
+
+    </section>
+
+</div>
+
+<script src="../Algos Js/quickSort.js"></script>
+<script src="../Algos Js/visualizations.js"></script>
+
+
+        <!-------------Implementations------------>
+        <section class="implement">
+            <hr><br>
+            <h2>IMPLEMENTATIONS</h2>
+            <ul>
+                <li style="background-color: orangered;"><img src="../images/C.png" onclick="CFunc4()"></li>
+                <li><img src="../images/C++.png" onclick="CPlusFunc4()"></li>
+                <li><img src="../images/Java.png" onclick="JavaFunc4()"></li>
+                <li><img src="../images/Python.png" onclick="PyFunc4()"></li>
+            </ul>
+            <div class="difCode" id="Code1">
+            <pre>
+                <code class="codesec">
+                    void swap(int *a, int *b) {
+                        int t = *a;
+                        *a = *b;
+                        *b = t;
+                      }
+                      
+                      int partition(int array[], int low, int high) {
+                      
+                        int pivot = array[high];
+                        int i = (low - 1);
+                      
+                        for (int j = low; j < high; j++) {
+                          if (array[j] <= pivot) {
+                            i++;
+                            swap(&array[i], &array[j]);
+                          }
+                        }
+                      
+                        swap(&array[i + 1], &array[high]);
+                        return (i + 1);
+                      }
+                      
+                      void quickSort(int array[], int low, int high) {
+                        if (low < high) {
+                      
+                          int pi = partition(array, low, high);
+                      
+                          quickSort(array, low, pi - 1);
+                      
+                          quickSort(array, pi + 1, high);
+                        }
+                      }
+        </code>
+            </pre>
+            </div>
+        </section>
+
+        <footer class="foot">
+            <span style="padding-right: 4%;"><b>© Copyright 2021</b></span>       
+            Sorting Visualizer
+        </footer>
+    </body>
+</html>

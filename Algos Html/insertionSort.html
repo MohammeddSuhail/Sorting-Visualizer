@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+        <title>Insertion Sort</title>
+        <link rel="stylesheet" href="../css/style1.css">
+        <meta charset="UTF-8">
+        <script src="../Algos Js/scriptForCode.js">
+        </script>
+        
+        
+        <!-- for icons from fontawesome -->
+        <script
+            src="https://kit.fontawesome.com/7a7e13cf9f.js"
+            crossorigin="anonymous">
+        </script>
+
+        <!-- for using fonnts from  fonts.google.com-->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Ubuntu:wght@300&display=swap"
+            rel="stylesheet"
+        />
+        
+    </head>
+    <body>
+        <div class="titleAndNav">
+            <h1>SORTING VISUALIZER</h1>
+            <img src="../images/menu.png" onclick="openmenu()">
+            <ul >
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="selectionSort.html">Selection Sort</a></li>
+                <li><a href="bubbleSort.html">Bubble Sort</a></li>
+                <li><a href="mergeSort.html">Merge Sort</a></li>
+                <li><a href="quickSort.html">Quick Sort</a></li>
+                <!-- <li  onclick="closemenu()" id="close2" style="display: none;"><a>Close</a></li> -->
+            </ul>
+            
+            <ul id="menu2" class="menu3">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="selectionSort.html">Selection Sort</a></li>
+                <li><a href="bubbleSort.html">Bubble Sort</a></li>
+                <li><a href="mergeSort.html">Merge Sort</a></li>
+                <li><a href="quickSort.html">Quick Sort</a></li>
+                <li  onclick="closemenu()" ><a>Close</a></li>
+            </ul>
+
+            <div class="clr"></div> 
+        </div>
+        <section class="heading">
+        <h1>Insertion Sort</h1><hr>
+        </section>
+        <!---------Content-------->
+        <section class="content">
+            <div class="left">
+
+            <h2>DESCRIPTION</h2>
+            <p>Insertion sort works similar to the sorting of playing cards in hands. It is assumed that the first card is already sorted in the card game, and then we select an unsorted card. If the selected unsorted card is greater than the first card, it will be placed at the right side; otherwise, it will be placed at the left side. Similarly, all unsorted cards are taken and put in their exact place.</p>
+
+              <p>  The same approach is applied in insertion sort. The idea behind the insertion sort is that first take one element, iterate it through the sorted array. It's really easy to implement and it's efficient on small data structures almost sorted<br></p>
+              <p>  Although it is simple to use, it is not appropriate for large data sets as the time complexity of insertion sort in the average case and worst case is O(n2), where n is the number of items. Insertion sort is less efficient than the other sorting algorithms like heap sort, quick sort, merge sort, etc.
+            </p>
+            </div>
+            <div class="right">
+            <h3>COMPLEXITY</h3>
+            <table>
+                <tr>
+                    <th>Average Complexity</th>
+                    <td>O(n<sup>2</sup>)</td>
+                </tr>
+                <tr>
+                    <th>Best Case</th>
+                    <td>O(n)</td>
+                </tr>
+                <tr>
+                    <th>Worst Case</th>
+                    <td>O(n<sup>2</sup>)</td>
+                </tr>
+                <tr>
+                    <th>Space Complexity</th>
+                    <td>O(1)</td>
+                </tr>
+            </table>
+        </div>
+        
+        </section>
+        <!-- ---------------Visualization----------- -->
+        <!-- <section class="visual">
+
+            
+           <br> <p>For <span style="color: rgb(186, 52, 212);"">insertion sort visualizer</span> click below</p>
+            <button type="button">Visualizer</button>
+        </section> -->
+
+        <div class="visual12">
+           
+
+            <button id="a_generate">Generate New Array!</button>
+            <button  id="bsort">Sort</button>
+        <nav>
+            <div class="array-inputs">
+                <p id="p1">Size of the array:</p>
+                <input id="a_size" type="range" min=20 max=150 step=1 value=80>
+                <p id="p2">Speed of the algorithm:</p>
+                <input id="a_speed" type="range" min=1 max=5 step=1 value=4>
+                
+            </div>
+        </nav>
+            
+    <section>
+
+        <div id="array_container">
+            
+        </div>
+
+    </section>
+
+</div>
+
+<script src="../Algos Js/insertionSort.js"></script>
+<script src="../Algos Js/visualizations.js"></script>
+
+
+
+
+        <!-------------Implementations------------>
+        <section class="implement">
+            <hr><br>
+            <h2>IMPLEMENTATIONS</h2>
+            <ul>
+                <li style="background-color: orangered;"><img src="../images/C.png" onclick="CFunc1()"></li>
+                <li><img src="../images/C++.png" onclick="CPlusFunc1()"></li>
+                <li><img src="../images/Java.png" onclick="JavaFunc1()"></li>
+                <li><img src="../images/Python.png" onclick="PyFunc1()"></li>
+            </ul>
+            <div class="difCode" id="Code1">
+            <pre>
+                <code class="codesec">
+                    void insertionSort(int arr[], int n)
+                    {
+                        int i, key, j;
+                        for (i = 1; i < n; i++) {
+                            key = arr[i];
+                            j = i - 1;
+                    
+                            while (j >= 0 && arr[j] > key) {
+                                arr[j + 1] = arr[j];
+                                j = j - 1;
+                            }
+                            arr[j + 1] = key;
+                        }
+                    }
+                    
+
+        </code>
+            </pre>
+            </div>
+        </section>
+
+        <footer class="foot">
+            <span style="padding-right: 4%;"><b>© Copyright 2021</b></span>       
+            Sorting Visualizer
+        </footer>
+    </body>
+</html>
